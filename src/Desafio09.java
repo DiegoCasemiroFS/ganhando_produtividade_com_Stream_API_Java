@@ -9,7 +9,9 @@ public class Desafio09 {
 
     numeros.stream()
         .distinct() // Remove duplicatas
-        .filter(num -> numeros.stream().filter(n -> n.equals(num)).count() > 1) // Filtra os números que ocorrem mais de uma vez
+        .filter(num -> numeros.stream()
+            .filter(n -> n.equals(num))
+            .count() > 1) // Filtra os números que ocorrem mais de uma vez
         .forEach(System.out::println); // Imprime os números iguais
   }
 
